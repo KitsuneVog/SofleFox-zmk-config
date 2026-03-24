@@ -91,7 +91,7 @@
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                |  UP  |      |   ^   |      |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                |  DN  |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |   <  |  PLAY |   >  |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &trans         &trans     &trans    &trans      &trans      &trans                    &trans         &trans     &trans   &trans     &trans  &trans
