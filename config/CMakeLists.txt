@@ -1,1 +1,0 @@
-target_sources(app PRIVATE src/display_status_screen.c)
