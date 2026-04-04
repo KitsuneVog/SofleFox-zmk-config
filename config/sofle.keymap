@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/behaviors.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -28,6 +28,10 @@
             tap-ms = <50>;
             bindings = <&msc>, <&msc>;
         };
+    };
+
+    &mt {
+        tap-ms = <50>;
     };
 
    // Activate ADJUST layer by pressing raise and lower
