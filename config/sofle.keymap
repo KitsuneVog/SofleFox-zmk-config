@@ -30,8 +30,12 @@
         };
     };
 
-    &mt {
-        tap-ms = <50>;
+    behaviors {
+        mt_esc: mt_esc {
+            compatible = "zmk,behavior-hold-tap";
+            tap-ms = <50>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+        };
     };
 
    // Activate ADJUST layer by pressing raise and lower
