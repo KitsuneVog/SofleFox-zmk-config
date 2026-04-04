@@ -33,8 +33,11 @@
     behaviors {
         mt_esc: mt_esc {
             compatible = "zmk,behavior-hold-tap";
-            tap-ms = <50>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
+            bindings = <&kp ESC &kp GRAVE>;  // tap и hold
+            tap-ms = <150>;                  // время для tap
+            flavor = "hold-preferred";       // удержание приоритетнее
+            quick-tap-ms = <200>;            // двойное нажатие вызывает tap
+            hold-while-undecided = <false>;  // не начинать hold сразу
         };
     };
 
