@@ -24,9 +24,9 @@
 
     behaviors {
         inc_dec_msc: inc_dec_msc {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
         };
     };
 
@@ -59,7 +59,7 @@
                     &kp LGUI        &kp LALT &none   &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE &kp BSPC &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_msc &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
