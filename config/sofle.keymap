@@ -49,13 +49,13 @@
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | LBKT  |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |  F13  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER| SPACE  |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
 &mt GRAVE ESC &kp N1 &kp N2   &kp N3   &kp N4  &kp N5                           &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB             &kp Q  &kp W    &kp E    &kp R   &kp T                            &kp Y     &kp U    &kp I     &kp O    &kp P    &kp LBKT
 &kp LSHFT           &kp A  &kp S    &kp D    &kp F   &kp G                            &kp H     &kp J    &kp K     &kp L    &kp SEMI &kp SQT
-&kp LCTRL           &kp Z  &kp X    &kp C    &kp V   &kp B      &kp C_MUTE &kp F13    &kp N     &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp LCTRL           &kp Z  &kp X    &kp C    &kp V   &kp B      &kp C_MUTE &none      &kp N     &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                     &kp LGUI        &kp LALT &none   &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE &kp BSPC &kp RALT  &kp RGUI
             >;
 
@@ -88,14 +88,14 @@
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                |  UP  |      |   ^   |      |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                |  DN  |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |   <  |  PLAY |   >  |       |       |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  | F13  |      |   <  |  PLAY |   >  |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
-&trans         &trans     &trans    &trans      &trans      &trans                    &trans         &trans     &trans   &trans     &trans  &trans
-&studio_unlock &kp INS    &kp PSCRN &kp K_CMENU &trans      &trans                    &msc SCRL_UP   &trans     &kp UP   &trans     &kp N0  &trans
-&trans         &kp LALT   &kp LCTRL &kp LSHFT   &trans      &kp CLCK                  &msc SCRL_DOWN &kp LEFT   &kp DOWN &kp RIGHT  &kp DEL &kp BSPC
-&trans         &kp K_UNDO &kp K_CUT &kp K_COPY  &kp K_PASTE &trans    &trans  &trans  &trans         &kp C_PREV &kp C_PP &kp C_NEXT &trans  &trans
-                          &trans    &trans      &trans      &trans    &trans  &trans  &trans         &trans     &trans   &trans
+&trans         &trans     &trans    &trans      &trans      &trans                     &trans         &trans     &trans   &trans     &trans  &trans
+&studio_unlock &kp INS    &kp PSCRN &kp K_CMENU &trans      &trans                     &msc SCRL_UP   &trans     &kp UP   &trans     &kp N0  &trans
+&trans         &kp LALT   &kp LCTRL &kp LSHFT   &trans      &kp CLCK                   &msc SCRL_DOWN &kp LEFT   &kp DOWN &kp RIGHT  &kp DEL &kp BSPC
+&trans         &kp K_UNDO &kp K_CUT &kp K_COPY  &kp K_PASTE &trans    &trans &kp F13  &trans         &kp C_PREV &kp C_PP &kp C_NEXT &trans  &trans
+                          &trans    &trans      &trans      &trans    &trans &trans   &trans         &trans     &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
