@@ -5,21 +5,6 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
         zmk,encoders = &sensors;
-        zmk,kscan = &mock_kscan;
-    };
-
-    mock_kscan: mock_kscan {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-
-    default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
-        columns = <0>;
-        rows = <0>;
-        map = <>;
     };
 
     physical_layout0: physical_layout_0 {
@@ -27,9 +12,15 @@
         transform = <&default_transform>;
     };
 
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <16>;
+        rows = <5>;
+    };
+
     sensors: sensors {
-    compatible = "zmk,keymap-sensors";
-    sensors = <&left_encoder &right_encoder>;
-    triggers-per-rotation = <20>;
-};
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
 };
