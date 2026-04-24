@@ -16,7 +16,7 @@
 #define ADJUST 3
 #define GAMES 4
 
-#include "sofle.dtsi"
+#include "C:/Users/KitsuneVog/Documents/zmk-config/.zmk/zmk/app/boards/shields/sofle/sofle.dtsi"
 
 &physical_layout0 {
     transform = <&default_transform>;
