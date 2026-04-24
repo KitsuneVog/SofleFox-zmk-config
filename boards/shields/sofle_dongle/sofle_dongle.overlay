@@ -2,11 +2,11 @@
 
 / {
     chosen {
-        zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
     };
 
-    default_transform: keymap_transform_0 {
+    mock_kscan: mock_kscan_0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;
         rows = <4>;
