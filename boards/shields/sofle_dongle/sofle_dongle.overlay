@@ -5,6 +5,7 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
         zmk,encoders = &sensors;
+        zmk,kscan = &mock_kscan;
     };
 
     mock_kscan: mock_kscan {
