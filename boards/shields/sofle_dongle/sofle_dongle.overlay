@@ -1,3 +1,4 @@
+#include <dt-bindings/zmk/matrix_transform.h>
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -15,7 +16,25 @@
 #define ADJUST 3
 #define GAMES 4
 
+#include "my_keyboard-layouts.dtsi"
+
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
 / {
+
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
 
     behaviors {
         inc_dec_msc: inc_dec_msc {
