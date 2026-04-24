@@ -26,4 +26,10 @@
         compatible = "zmk,physical-layout";
         transform = <&default_transform>;
     };
+
+    sensors: sensors {
+    compatible = "zmk,keymap-sensors";
+    sensors = <&left_encoder &right_encoder>;
+    triggers-per-rotation = <20>;
+};
 };
