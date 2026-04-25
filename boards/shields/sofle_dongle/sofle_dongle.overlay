@@ -3,6 +3,7 @@
 
 / {
     chosen {
+        zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
         zmk,matrix-transform = &default_transform;
     };
