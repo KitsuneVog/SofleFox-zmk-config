@@ -6,6 +6,7 @@
         zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
         zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &physical_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -33,7 +34,7 @@
         a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
-        status = "disabled";
+        status = "okay";
     };
 
     right_encoder: encoder_right {
@@ -41,13 +42,20 @@
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
-        status = "disabled";
+        status = "okay";
     };
-    
+
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
+    };
+
+    physical_layout: physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Sofle Dongle";
+
+        transform = <&default_transform>;
     };
 };
 
