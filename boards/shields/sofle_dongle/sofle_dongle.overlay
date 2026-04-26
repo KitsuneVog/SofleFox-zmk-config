@@ -5,7 +5,6 @@
     chosen {
         zephyr,display = &oled;
         zmk,matrix-transform = &default_transform;
-        zmk,underglow = &underglow;
     };
 
     default_transform: keymap_transform_0 {
@@ -45,13 +44,6 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
-    };
-
-    underglow: underglow {
-        compatible = "zmk,ws2812";
-        label = "UNDERGLOW";
-        chain-length = <10>;   // adjust to your LED count
-        spi-dev = <&spi1>;     // depends on your board wiring
     };
 };
 
