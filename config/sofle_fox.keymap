@@ -42,7 +42,7 @@
 
 
         base_layer {
-            display-name = "BASE";
+            display-name = "QWERTY";
             bindings = <
 &mt GRAVE ESC &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                             &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB       &kp Q    &kp W    &kp E    &kp R    &kp T                              &kp Y     &kp U    &kp I     &kp O    &kp P    &kp LBKT
@@ -75,7 +75,7 @@
             display-name = "RAISE";
             bindings = <
 &trans &trans     &trans    &trans      &trans      &trans                      &trans         &trans     &trans   &trans     &trans  &trans
-&trans &kp INS    &kp PSCRN &kp K_CMENU &trans      &trans                      &msc SCRL_UP   &trans     &kp UP   &trans     &kp N0  &trans
+&trans &kp INS    &kp PSCRN &kp K_CMENU &trans      &trans                      &msc SCRL_UP   &trans     &kp UP   &trans     &trans  &trans
 &trans &kp LALT   &kp LCTRL &kp LSHFT   &trans      &kp CLCK                    &msc SCRL_DOWN &kp LEFT   &kp DOWN &kp RIGHT  &kp DEL &kp BSPC
 &trans &kp K_UNDO &kp K_CUT &kp K_COPY  &kp K_PASTE &trans   &trans   &kp F15   &trans         &kp C_PREV &kp C_PP &kp C_NEXT &trans  &trans
                             &trans      &trans      &trans    &trans   &kp ENTER &kp SPACE &trans         &trans     &trans   &trans
