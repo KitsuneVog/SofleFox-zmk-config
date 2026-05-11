@@ -25,17 +25,13 @@
     status = "okay";
 };
 
-&pro_micro_i2c {
-    status = "okay";
+&oled: ssd1306@3c {
+    compatible = "solomon,ssd1306fb";
+    reg = <0x3c>;
 
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
+    width = <128>;
+    height = <32>;
 
-        width = <128>;
-        height = <32>;
-
-        segment-remap;
-        com-invdir;
-    };
+    
+    com-invdir;
 };
