@@ -43,6 +43,8 @@ config ZMK_WPM_GRAPH_ENABLED
     bool "Enable WPM graph"
     default y
 
+endif
+
 if SHIELD_SOFLE_FOX_RIGHT
 
 config ZMK_KEYBOARD_NAME
