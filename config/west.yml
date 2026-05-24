@@ -8,7 +8,8 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      url: https://github.com/KitsuneVog/zmk
+      revision: main
       import: app/west.yml
   self:
     path: config
