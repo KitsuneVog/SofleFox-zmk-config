@@ -6,6 +6,12 @@
 
 #include "sofle_fox.dtsi"
 
+/ {
+    chosen {
+        zmk,battery = &battery;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };

@@ -6,6 +6,12 @@
 
 #include "sofle_fox.dtsi"
 
+/ {
+    chosen {
+        zmk,battery = &battery;
+    };
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH>
