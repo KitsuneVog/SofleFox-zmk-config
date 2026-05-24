@@ -8,7 +8,11 @@
 
 / {
     chosen {
-        zmk,battery = &vbatt;
+      zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
     };
 };
 

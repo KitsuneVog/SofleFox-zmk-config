@@ -7,6 +7,10 @@
         zmk,battery = &vbatt;
     };
 
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
