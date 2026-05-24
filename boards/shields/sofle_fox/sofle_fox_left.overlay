@@ -8,7 +8,7 @@
 
 / {
     chosen {
-        zmk,battery = &battery;
+        zmk,battery = &vbatt;
     };
 };
 
