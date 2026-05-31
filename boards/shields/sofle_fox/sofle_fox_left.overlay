@@ -9,6 +9,7 @@
 / {
     chosen {
       zmk,battery = &vbatt;
+      zmk,underglow = &underglow;
     };
 
     vbatt: vbatt {
